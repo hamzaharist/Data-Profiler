@@ -108,8 +108,8 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 ---
 
-## 📬 Contact
+## 🔗 Connect
 
-Hamza Harist - [GitHub](https://github.com/hamzaharist)
+Harist Hamzah Hutapea - [GitHub](https://github.com/hamzaharist)
 
 Project Link: [https://github.com/hamzaharist/Data-Profiler](https://github.com/hamzaharist/Data-Profiler)
