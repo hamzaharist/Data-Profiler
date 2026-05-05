@@ -1,0 +1,20 @@
+# Agent & AI Metadata
+_bmad/
+_bmad-output/
+.gemini/
+antigravity/
+.antigravity/
+.claude/
+
+# Project Specific (Vite/React)
+data-profiler-pro/node_modules/
+data-profiler-pro/dist/
+data-profiler-pro/build/
+data-profiler-pro/.env*
+
+# IDE & OS files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+*.log

@@ -1,0 +1,11 @@
+.panelTitle { color: var(--muted); font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; margin-bottom: 14px; }
+.sectionTitle { color: var(--muted); font-size: 10px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; margin: 20px 0 10px; }
+.bars { display: flex; flex-direction: column; gap: 6px; margin-bottom: 8px; }
+.barRow { display: flex; align-items: center; gap: 8px; }
+.barLabel { font-family: var(--font-mono); font-size: 11px; color: var(--muted); min-width: 120px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.barTrack { flex: 1; height: 6px; background: var(--border); border-radius: 3px; overflow: hidden; }
+.barFill { height: 100%; border-radius: 3px; transition: width 0.3s; }
+.barPct { font-family: var(--font-mono); font-size: 11px; color: var(--muted); min-width: 40px; text-align: right; }
+.gridWrap { overflow: auto; max-height: 300px; }
+.grid { display: grid; gap: 1px; width: fit-content; }
+.cell { width: 12px; height: 6px; border-radius: 1px; }

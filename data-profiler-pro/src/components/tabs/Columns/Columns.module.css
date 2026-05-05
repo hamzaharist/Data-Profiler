@@ -1,0 +1,24 @@
+.empty { color: var(--muted); font-size: 13px; padding: 40px 0; text-align: center; }
+.header { display: flex; align-items: center; gap: 8px; margin-bottom: 16px; flex-wrap: wrap; }
+.colName { font-size: 16px; font-weight: 700; font-family: var(--font-mono); }
+.pill { border-radius: var(--radius-sm); padding: 2px 8px; font-size: 11px; font-family: var(--font-mono); border: 1px solid; display: inline-block; }
+.pills { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 12px; }
+.statGrid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 12px; }
+.statBox { background: var(--bg); border-radius: var(--radius-md); padding: 12px 16px; border: 1px solid var(--border); }
+.statRow { display: flex; justify-content: space-between; align-items: center; padding: 5px 0; border-bottom: 1px solid var(--border); }
+.statRow:last-child { border-bottom: none; }
+.statLabel { color: var(--muted); font-size: 12px; font-family: var(--font-mono); }
+.statValue { font-family: var(--font-mono); font-size: 12px; color: var(--text); }
+.alertRed { background: rgba(241,107,107,0.08); border: 1px solid rgba(241,107,107,0.3); border-radius: var(--radius-md); padding: 10px 14px; font-size: 12px; color: var(--red); margin-bottom: 12px; }
+.alertYellow { background: rgba(245,197,66,0.08); border: 1px solid rgba(245,197,66,0.3); border-radius: var(--radius-md); padding: 10px 14px; font-size: 12px; margin-bottom: 12px; }
+.alertTitle { font-weight: 700; margin-bottom: 4px; color: var(--yellow); }
+.caseRow { font-family: var(--font-mono); font-size: 11px; color: var(--muted); margin: 2px 0; }
+.chartLabel { color: var(--muted); font-size: 11px; font-weight: 600; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 8px; margin-top: 4px; }
+.chartWrap { height: 160px; margin-bottom: 12px; }
+.chartWrapTall { height: 220px; margin-bottom: 12px; }
+.vcTable { max-height: 200px; overflow-y: auto; }
+.vcRow { display: flex; justify-content: space-between; padding: 4px 0; border-bottom: 1px solid var(--border); font-size: 12px; }
+.vcRow:last-child { border-bottom: none; }
+.vcKey { color: var(--text); font-family: var(--font-mono); }
+.vcCount { color: var(--muted); font-family: var(--font-mono); }
+.gapRow { display: flex; gap: 12px; padding: 4px 0; border-bottom: 1px solid rgba(37,40,48,0.3); font-size: 12px; font-family: var(--font-mono); }

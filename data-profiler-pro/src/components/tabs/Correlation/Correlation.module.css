@@ -1,0 +1,16 @@
+.empty, .panelTitle { color: var(--muted); font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; margin-bottom: 14px; }
+.empty { padding: 40px 0; text-align: center; font-size: 13px; }
+.sectionTitle { color: var(--muted); font-size: 10px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; margin: 20px 0 10px; }
+.tableWrap { overflow: auto; margin-bottom: 8px; max-height: 420px; }
+.heatmap { border-collapse: collapse; font-size: 11px; }
+.heatHead { color: var(--muted); font-weight: 600; padding: 4px 8px; font-family: var(--font-mono); font-size: 10px; white-space: nowrap; max-width: 80px; overflow: hidden; text-overflow: ellipsis; }
+.heatLabel { color: var(--muted); font-family: var(--font-mono); font-size: 10px; padding: 4px 8px; white-space: nowrap; }
+.heatCell { padding: 0; width: 48px; height: 32px; text-align: center; }
+.heatVal { font-family: var(--font-mono); font-size: 9px; color: var(--text); }
+.topTable { width: 100%; border-collapse: collapse; font-size: 12px; }
+.topTable th { text-align: left; color: var(--muted); font-weight: 600; padding: 6px 10px; border-bottom: 1px solid var(--border); font-size: 11px; text-transform: uppercase; }
+.topTable td { padding: 7px 10px; border-bottom: 1px solid var(--border); color: var(--text); }
+.topTable tr:last-child td { border-bottom: none; }
+.rankCell { color: var(--muted); font-family: var(--font-mono); }
+.colCell { font-family: var(--font-mono); font-size: 11px; }
+.strength { color: var(--muted); font-size: 11px; }
