@@ -1,6 +1,6 @@
 import { useReducer, useRef, useCallback } from 'react';
 import type { AppState, AppAction, TabId, WorkerOutbound } from './types';
-import DropZone from './components/DropZone';
+import Landing from './components/Landing';
 import ProgressBar from './components/ProgressBar';
 import ErrorState from './components/ErrorState';
 import Sidebar from './components/Sidebar';
@@ -82,15 +82,7 @@ export default function App() {
   }, []);
 
   if (state.status === 'idle') {
-    return (
-      <div className={styles.page}>
-        <header className={styles.header}>
-          <h1>Data Profiler <span>Pro</span></h1>
-          <span className={styles.subtitle}>Drop a file. Get instant data quality insights.</span>
-        </header>
-        <DropZone onFile={handleFile} />
-      </div>
-    );
+    return <Landing onFile={handleFile} />;
   }
 
   if (state.status === 'loading') {
