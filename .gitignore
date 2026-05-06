@@ -7,6 +7,7 @@ antigravity/
 .claude/
 
 # Project Specific (Vite/React)
+node_modules/
 data-profiler-pro/node_modules/
 data-profiler-pro/dist/
 data-profiler-pro/build/
