@@ -1,4 +1,5 @@
 import { useReducer, useRef, useCallback } from 'react';
+import { Analytics } from '@vercel/analytics/react';
 import type { AppState, AppAction, TabId, WorkerOutbound } from './types';
 import DropZone from './components/DropZone';
 import ProgressBar from './components/ProgressBar';
@@ -83,35 +84,44 @@ export default function App() {
 
   if (state.status === 'idle') {
     return (
-      <div className={styles.page}>
-        <header className={styles.header}>
-          <h1>Data Profiler <span>Pro</span></h1>
-          <span className={styles.subtitle}>Drop a file. Get instant data quality insights.</span>
-        </header>
-        <DropZone onFile={handleFile} />
-      </div>
+      <>
+        <div className={styles.page}>
+          <header className={styles.header}>
+            <h1>Data Profiler <span>Pro</span></h1>
+            <span className={styles.subtitle}>Drop a file. Get instant data quality insights.</span>
+          </header>
+          <DropZone onFile={handleFile} />
+        </div>
+        <Analytics />
+      </>
     );
   }
 
   if (state.status === 'loading') {
     return (
-      <div className={styles.page}>
-        <header className={styles.header}>
-          <h1>Data Profiler <span>Pro</span></h1>
-        </header>
-        <ProgressBar progress={state.progress} />
-      </div>
+      <>
+        <div className={styles.page}>
+          <header className={styles.header}>
+            <h1>Data Profiler <span>Pro</span></h1>
+          </header>
+          <ProgressBar progress={state.progress} />
+        </div>
+        <Analytics />
+      </>
     );
   }
 
   if (state.status === 'error') {
     return (
-      <div className={styles.page}>
-        <header className={styles.header}>
-          <h1>Data Profiler <span>Pro</span></h1>
-        </header>
-        <ErrorState message={state.message} onReset={handleReset} />
-      </div>
+      <>
+        <div className={styles.page}>
+          <header className={styles.header}>
+            <h1>Data Profiler <span>Pro</span></h1>
+          </header>
+          <ErrorState message={state.message} onReset={handleReset} />
+        </div>
+        <Analytics />
+      </>
     );
   }
 
@@ -130,20 +140,23 @@ export default function App() {
   };
 
   return (
-    <div className={styles.appLayout}>
-      <Sidebar
-        data={data}
-        activeTab={activeTab}
-        activeColumn={activeColumn}
-        columnSearch={columnSearch}
-        onTabChange={tab => dispatch({ type: 'TAB_CHANGE', payload: tab })}
-        onColumnSelect={col => dispatch({ type: 'COLUMN_SELECT', payload: col })}
-        onColumnSearch={q => dispatch({ type: 'COLUMN_SEARCH', payload: q })}
-        onReset={handleReset}
-      />
-      <main className={styles.mainPanel}>
-        {renderTab(activeTab)}
-      </main>
-    </div>
+    <>
+      <div className={styles.appLayout}>
+        <Sidebar
+          data={data}
+          activeTab={activeTab}
+          activeColumn={activeColumn}
+          columnSearch={columnSearch}
+          onTabChange={tab => dispatch({ type: 'TAB_CHANGE', payload: tab })}
+          onColumnSelect={col => dispatch({ type: 'COLUMN_SELECT', payload: col })}
+          onColumnSearch={q => dispatch({ type: 'COLUMN_SEARCH', payload: q })}
+          onReset={handleReset}
+        />
+        <main className={styles.mainPanel}>
+          {renderTab(activeTab)}
+        </main>
+      </div>
+      <Analytics />
+    </>
   );
 }
